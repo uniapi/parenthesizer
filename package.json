@@ -1,0 +1,29 @@
+{
+  "name": "parenthesizer",
+  "version": "1.0.0",
+  "description": "An As-Parentheses Matcher",
+  "main": "src/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "init": "mkdir dist",
+    "clean": "rm -rf dist",
+    "note": "cp LICENSE README.md dist",
+    "build": "babel src test -d dist --presets env && npm run note",
+    "test": "npm run build && mocha --require babel-core/register dist/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uniapi/RSS/tree/parenthesizer/parenthesizer"
+  },
+  "author": "Ali Muhammed",
+  "license": "OSL-3.0",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0"
+  },
+  "dependencies": {
+    "mocha": "^5.2.0"
+  }
+}
